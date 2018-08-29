@@ -16,7 +16,7 @@ const moment = require("moment");
 require("moment-duration-format");
 
 
-var prefix = 'ds!';
+var prefix = '~';
 
 
 client.on("message", async message => {
