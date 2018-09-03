@@ -130,11 +130,12 @@ ${videos.map(video2 => `**${++index} -** ${video2.title}`).join('\n')}`
 		serverQueue.songs = [];
 		serverQueue.connection.dispatcher.end('Stop command has been used') 
 	
-        }})
+       
 		return message.channel.send({embed: {
             color: 0xa7f9da,
             description: `⏹️ Music has been Stopped.`}}) 
-		
+        }}) 
+         return undefined;
 break;
       case "volume":
       if (message.channel.type === 'dm') return;
