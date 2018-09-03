@@ -97,7 +97,7 @@ ${videos.map(video2 => `**${++index} -** ${video2.title}`).join('\n')}`
 			}
 			return handleVideo(video, message, voiceChannel);
 		}
-        break;
+      
       case "skip":
       case "s":
       if (message.channel.type === 'dm') return;
@@ -115,7 +115,7 @@ ${videos.map(video2 => `**${++index} -** ${video2.title}`).join('\n')}`
             description: `⛔ Skip command has been used.`
         }})
 		return undefined;
-        break;
+     
       case "stop":
       if (message.channel.type === 'dm') return;
   
@@ -136,7 +136,7 @@ ${videos.map(video2 => `**${++index} -** ${video2.title}`).join('\n')}`
             description: `⏹️ Music has been Stopped.`}}) 
         }}) 
          return undefined;
-break;
+
       case "volume":
       if (message.channel.type === 'dm') return;
     
@@ -158,7 +158,6 @@ break;
             color: 0xa7f9da,
             description: `🔊 I set the volume to: **${args[1]}**`
         }})
-break;
       case "np":
       case "nowplaying":
       if (message.channel.type === 'dm') return;
@@ -170,7 +169,6 @@ break;
             color: 0xa7f9da,
             description: `🎶 Now playing: **${serverQueue.songs[0].title}**`
         }})
-break;
       case "queue":
       case "q":
       if (message.channel.type === 'dm') return;
@@ -184,7 +182,7 @@ break;
 ${serverQueue.songs.map(song => `**-** ${song.title}`).join('\n')}
 **🎶Now playing:** ${serverQueue.songs[0].title}`
         }})
-break;
+
       case "pause":
       if (message.channel.type === 'dm') return;
      
@@ -200,7 +198,7 @@ break;
             color: 0xa7f9da,
             description: `⛔ There is nothing playing.`
         }})
-break;
+
       case "resume":
       if (message.channel.type === 'dm') return;
      
@@ -219,7 +217,7 @@ break;
 	
 
 	return undefined;
-break;
+
 }
 async function handleVideo(video, message, voiceChannel, playlist = false) {
 	var serverQueue = queue.get(message.guild.id);
