@@ -101,10 +101,7 @@ ${videos.map(video2 => `**${++index} -** ${video2.title}`).join('\n')}`
       case "skip":
       case "s":
       if (message.channel.type === 'dm') return;
-      if (!message.member.hasPermission('ADMINISTRATOR')) { 
-        message.channel.send (`Sorry ${message.author}, You Need ADMINISTRATOR Permissions for use this commands!`); 
-        return; 
-    }
+    
 		if (!message.member.voiceChannel) return message.channel.send({embed: {
             color: 0xa7f9da,
             description: `⛔ You are not in voice channel!`
@@ -121,10 +118,7 @@ ${videos.map(video2 => `**${++index} -** ${video2.title}`).join('\n')}`
         break;
       case "stop":
       if (message.channel.type === 'dm') return;
-      if (!message.member.hasPermission('ADMINISTRATOR')) { 
-        message.channel.send (`Sorry ${message.author}, You Need ADMINISTRATOR Permissions for use this commands!`); 
-        return; 
-    }
+  
 		if (!message.member.voiceChannel) return message.channel.send({embed: {
             color: 0xa7f9da,
             description: `⛔ You are not in a voice channel!`
@@ -142,10 +136,7 @@ ${videos.map(video2 => `**${++index} -** ${video2.title}`).join('\n')}`
 break;
       case "volume":
       if (message.channel.type === 'dm') return;
-      if (!message.member.hasPermission('ADMINISTRATOR')) { 
-        message.channel.send (`Sorry ${message.author}, You Need ADMINISTRATOR Permissions for use this commands!`); 
-        return; 
-    }
+    
 		if (!message.member.voiceChannel) return message.channel.send({embed: {
             color: 0xa7f9da,
             description: `⛔ You are not in a voice channel!`
@@ -193,10 +184,7 @@ ${serverQueue.songs.map(song => `**-** ${song.title}`).join('\n')}
 break;
       case "pause":
       if (message.channel.type === 'dm') return;
-      if (!message.member.hasPermission('ADMINISTRATOR')) { 
-        message.channel.send (`Sorry ${message.author}, You Need ADMINISTRATOR Permissions for use this commands!`); 
-        return; 
-    }
+     
 		if (serverQueue && serverQueue.playing) {
 			serverQueue.playing = false;
 			serverQueue.connection.dispatcher.pause();
@@ -212,10 +200,7 @@ break;
 break;
       case "resume":
       if (message.channel.type === 'dm') return;
-      if (!message.member.hasPermission('ADMINISTRATOR')) { 
-        message.channel.send (`Sorry ${message.author}, You Need ADMINISTRATOR Permissions for use this commands!`); 
-        return; 
-    }
+     
 		if (serverQueue && !serverQueue.playing) {
 			serverQueue.playing = true;
 			serverQueue.connection.dispatcher.resume();
@@ -321,9 +306,6 @@ async function handleVideo(video, message, voiceChannel, playlist = false) {
    serverQueue.textChannel.send(serverembed);
 }
 });
-
-
-
 
 
 client.login(process.env.token);
