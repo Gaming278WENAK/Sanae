@@ -15,10 +15,7 @@ const db = require('quick.db')
 const moment = require("moment");
 require("moment-duration-format");
 
-
 var prefix = '~';
-
-
 client.on("message", async message => {
     var args = message.content.substring(prefix.length).split(" ");
     if (!message.content.startsWith(prefix)) return;
@@ -48,7 +45,7 @@ client.on("message", async message => {
                 description: `⛔ I cannot connect to your voice channel, make sure I have the proper permissions`
             }})
 		}
-      if (url.match(/^https?:\/\/(www.youtube.com|youtube.com)\/playlist(.*)$/)) {
+       if (url.match(/^https?:\/\/(www.youtube.com|youtube.com)\/playlist(.*)$/)) {
 			var playlist = await youtube.getPlaylist(url);
 			var videos = await playlist.getVideos();
 			for (const video of Object.values(videos)) {
@@ -84,24 +81,19 @@ ${videos.map(video2 => `**${++index} -** ${video2.title}`).join('\n')}`
                             color: 0xa7f9da,
                             description: `❎ Cancelling song selection.`
                         }})
-					}
+          }
 					var videoIndex = parseInt(response.first().content);
 					var video = await youtube.getVideoByID(videos[videoIndex - 1].id);
 				} catch (err) {
 					console.error(err);
-					return message.channel.send({embed: {
-                        color: 0xa7f9da,
-                        description: `⛔ I don't think so. . .`
-                    }})
+					return message.channel.send('🆘 I could not obtain any search results.');
 				}
 			}
 			return handleVideo(video, message, voiceChannel);
 		}
-      
+        break;
       case "skip":
       case "s":
-      if (message.channel.type === 'dm') return;
-    
 		if (!message.member.voiceChannel) return message.channel.send({embed: {
             color: 0xa7f9da,
             description: `⛔ You are not in voice channel!`
@@ -115,9 +107,9 @@ ${videos.map(video2 => `**${++index} -** ${video2.title}`).join('\n')}`
             description: `⛔ Skip command has been used.`
         }})
 		return undefined;
-     
+        break;
       case "stop":
-      if (message.channel.type === 'dm') return;
+ if (message.channel.type === 'dm') return;
   
 		if (!message.member.voiceChannel) return message.channel.send({embed: {
             color: 0xa7f9da,
@@ -134,9 +126,9 @@ ${videos.map(video2 => `**${++index} -** ${video2.title}`).join('\n')}`
 		return message.channel.send({embed: {
             color: 0xa7f9da,
             description: `⏹️ Music has been Stopped.`}}) 
-        }}) 
-         return undefined;
-
+                                         
+		return undefined;
+break;
       case "volume":
       if (message.channel.type === 'dm') return;
     
@@ -215,9 +207,7 @@ ${serverQueue.songs.map(song => `**-** ${song.title}`).join('\n')}
             description: `⛔ There is nothing playing.`
         }})
 	
-
 	return undefined;
-
 }
 async function handleVideo(video, message, voiceChannel, playlist = false) {
 	var serverQueue = queue.get(message.guild.id);
@@ -308,5 +298,4 @@ async function handleVideo(video, message, voiceChannel, playlist = false) {
 }
 });
 
-
-client.login(process.env.token);
+client.login(process.env.TOKEN)
