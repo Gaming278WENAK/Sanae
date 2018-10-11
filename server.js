@@ -1,5 +1,4 @@
 const discord = require("discord.js");
-const superagent = require("superagent");
 const YouTube = require("simple-youtube-api");
 const ytdl = require("ytdl-core");
 const opus = require("opusscript");
