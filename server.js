@@ -21,7 +21,7 @@ bot.on('message', async msg => { // eslint-disable-line
     if (message.author.bot) return;
     if (message.channel.type === 'dm') return;
  
-    var PREFIX = '>>'
+    var PREFIX = '~'
  
     if (commandcooldown.has(message.author.id)) {
         return;
