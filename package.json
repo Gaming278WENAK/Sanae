@@ -1,41 +1,52 @@
 {
-  "name": "Dekomori Sanae",
-  "version": "0.0.1",
-  "description": "A simple Node app built on Express, instantly up and running.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
+    "cooldown": "^0.2.0",
+    "cpu-stat": "^2.0.1",
+    "dblapi.js": "^2.2.0",
+    "discord.js": "^11.4.2",
+    "embed": "^0.0.1",
     "express": "^4.16.3",
-    "fs": "^0.0.2",
-    "superagent": "^3.8.3",
-    "moment": "^2.22.1",
-    "opusscript": "0.0.6",
-    "snekfetch": "^4.0.0",
-    "string-similarity": "^1.2.0",
+    "google": "^2.1.0",
+    "handle": "^1.0.0",
+    "minimist": "^1.2.0",
+    "moment": "^2.22.2",
     "moment-duration-format": "^2.2.2",
-    "os": "^0.1.1",
-    "ffmpeg-binaries": "4.0.0",
-    "node-opus": "0.3.0",
+    "node-opus": "^0.3.0",
+    "parse-ms": "^2.0.0",
+    "queue": "^4.5.0",
+    "opusscript": "0.0.6",
+    "canvas-constructor": "^1.1.2",
+    "canvas": "^1.6.12",
+    "quick.hook": "^1.4.0",
+    "random-puppy": "^1.1.0",
+    "request": "^2.88.0",
     "simple-youtube-api": "^5.0.2",
-    "ytdl-core": "^0.20.3",
-    "dateformat": "^3.0.3",
+    "superagent": "^3.8.3",
+    "url": "^0.11.0",
     "weather-js": "^2.0.0",
-    "quick.db": "^6.2.1",
-    "discord.js": "^11.4.2"
+    "ytdl-core": "^0.26.0",
+    "google-tts-api": "^0.0.3",
+    "chalk": "^2.4.1",
+    "musicmatch": "^0.3.2",
+    "super": "^0.2.3",
+    "cheerio": "^0.22.0",
+    "snekfetch": "^4.0.4",
+    "lyrics-fetcher": "^1.0.2",
+    "node-superfetch": "^0.1.7",
+    "pretty-quick": "^1.7.0",
+    "klasa": "^0.4.0",
+    "common-tags": "^1.8.0",
+    "lyricist": "^2.2.2",
+    "node-hackgenius": "^1.0.0",
+    "quick.db": "^6.3.2",
+    "fortnite": "^4.1.1"
   },
   "engines": {
     "node": "8.x"
   },
-  "repository": {
-    "url": "https://glitch.com/edit/#!/hello-express"
-  },
-  "author": "ItzMeDwii",
-  "license": "MIT",
-  "keywords": [
-    "node",
-    "glitch",
-    "express"
-  ]
+  "license": "MIT"
 }
