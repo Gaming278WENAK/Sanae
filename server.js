@@ -1,4 +1,4 @@
-const Discord = require("discord.js");
+const discord = require("discord.js");
 const superagent = require("superagent");
 const YouTube = require("simple-youtube-api");
 const ytdl = require("ytdl-core");
@@ -7,7 +7,7 @@ const opus = require("opusscript");
 var commandcooldown = new Set();
 var queue = new Map();
  
-var bot = new Discord.Client({
+var bot = new discord.Client({
     disableEveryone: false
 })
 var youtube = new YouTube(process.env.yt);
