@@ -1,4 +1,4 @@
-const discord = require("discord.js");
+const Discord = require("discord.js");
 const YouTube = require("simple-youtube-api");
 const ytdl = require("ytdl-core");
 const opus = require("opusscript");
@@ -6,7 +6,7 @@ const opus = require("opusscript");
 var commandcooldown = new Set();
 var queue = new Map();
  
-var bot = new discord.Client({
+var bot = new Discord.Client({
     disableEveryone: false
 })
 var youtube = new YouTube(process.env.yt);
