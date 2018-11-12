@@ -4,7 +4,7 @@ const YouTube = require("simple-youtube-api");
 const ytdl = require("ytdl-core");
 const opus = require("opusscript");
  
-const PREFIX = 's!';
+const PREFIX = '~';
 var commandcooldown = new Set();
 var queue = new Map();
  
