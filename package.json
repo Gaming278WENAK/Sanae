@@ -1,41 +1,23 @@
 {
-  "name": "Dekomori Sanae",
-  "version": "0.0.1",
-  "description": "A simple Node app built on Express, instantly up and running.",
+  "name": "forcestop-musicbots",
+  "version": "2.1.0",
   "main": "server.js",
+  "description": "MUSIC BOT BY ForceStop.",
   "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.16.3",
-    "discord.js": "^11.4.2",
-    "fs": "^0.0.2",
-    "superagent": "^3.8.3",
-    "moment": "^2.22.1",
-    "opusscript": "0.0.6",
-    "snekfetch": "^4.0.0",
-    "string-similarity": "^1.2.0",
-    "moment-duration-format": "^2.2.2",
-    "os": "^0.1.1",
-    "ffmpeg-binaries": "4.0.0",
-    "node-opus": "0.3.0",
     "simple-youtube-api": "^5.0.2",
-    "ytdl-core": "^0.20.3",
-    "dateformat": "^3.0.3",
-    "weather-js": "^2.0.0",
-    "quick.db": "^6.2.1"
+    "discord.js": "^11.3.2",
+    "opusscript": "^0.0.6",
+    "superagent": "^3.8.3",
+    "ytdl-core": "^0.20.2",
+    "ffmpeg-binaries": "4.0.0",
+    "fs": "^0.0.2"
   },
   "engines": {
     "node": "8.x"
   },
-  "repository": {
-    "url": "https://glitch.com/edit/#!/hello-express"
-  },
-  "author": "ItzMeDwii",
-  "license": "MIT",
-  "keywords": [
-    "node",
-    "glitch",
-    "express"
-  ]
+  "repository": {},
+  "license": "MIT"
 }
